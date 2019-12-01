@@ -1,4 +1,4 @@
-# charts/tests.py
+# pages/tests.py
 from django.test import SimpleTestCase
 from django.urls import reverse, resolve
 
