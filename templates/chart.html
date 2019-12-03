@@ -1,50 +1,8 @@
 <!-- templates/chart.html -->
 {% extends '_base.html' %}
-{% load static %}
 
-{% block title %}Home{% endblock title %}
+{% block title %}My Chart{% endblock title %}
 
 {% block content %}
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Chart</title>
-</head>
-
-<body>
-    <div id="container" style="width:100%; height:400px;">
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                var myChart = Highcharts.chart('container', {
-                    chart: {
-                        type: 'bar'
-                    },
-                    title: {
-                        text: 'Design The Best Day Possible'
-                    },
-                    xAxis: {
-                        categories: ['Apples', 'Bananas', 'Oranges']
-                    },
-                    yAxis: {
-                        title: {
-                            text: 'Fruit eaten'
-                        }
-                    },
-                    series: [{
-                        name: 'Jane',
-                        data: [1, 0, 4]
-                    }, {
-                        name: 'John',
-                        data: [5, 7, 3]
-                    }]
-                });
-            });
-        </script>
-    </div>
-</body>
-
-</html>
-{% endif %}
+<h1>My Chart</h1>
 {% endblock content %}
