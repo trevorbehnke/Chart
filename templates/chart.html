@@ -7,30 +7,36 @@
 <h1>My Chart</h1>
 <div id="container" style="width:100%; height:400px;">
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var myChart = Highcharts.chart('container', {
-                chart: {
-                    type: 'bar'
-                },
-                title: {
-                    text: 'Design The Best Day Possible'
-                },
-                xAxis: {
-                    categories: ['Apples', 'Bananas', 'Oranges']
-                },
-                yAxis: {
-                    title: {
-                        text: 'Fruit eaten'
-                    }
-                },
-                series: [{
-                    name: 'Jane',
-                    data: [1, 0, 4]
+        Highcharts.ganttChart('container', {
+            title: {
+                text: 'Simple Gantt Chart'
+            },
+
+            series: [{
+                name: 'Project 1',
+                data: [{
+                    id: 's',
+                    name: 'Start prototype',
+                    start: Date.UTC(2014, 10, 18),
+                    end: Date.UTC(2014, 10, 20)
                 }, {
-                    name: 'John',
-                    data: [5, 7, 3]
+                    id: 'b',
+                    name: 'Develop',
+                    start: Date.UTC(2014, 10, 20),
+                    end: Date.UTC(2014, 10, 25),
+                    dependency: 's'
+                }, {
+                    id: 'a',
+                    name: 'Run acceptance tests',
+                    start: Date.UTC(2014, 10, 23),
+                    end: Date.UTC(2014, 10, 26)
+                }, {
+                    name: 'Test prototype',
+                    start: Date.UTC(2014, 10, 27),
+                    end: Date.UTC(2014, 10, 29),
+                    dependency: ['a', 'b']
                 }]
-            });
+            }]
         });
     </script>
 </div>
