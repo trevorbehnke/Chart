@@ -9,29 +9,29 @@
     <script>
         Highcharts.ganttChart('container', {
             title: {
-                text: 'Simple Gantt Chart'
+                text: 'Design the Best Day Possible!'
             },
 
             series: [{
                 name: 'Project 1',
                 data: [{
                     id: 's',
-                    name: 'Start prototype',
+                    name: 'Create Web App',
                     start: Date.UTC(2014, 10, 18),
                     end: Date.UTC(2014, 10, 20)
                 }, {
                     id: 'b',
-                    name: 'Develop',
+                    name: 'Study',
                     start: Date.UTC(2014, 10, 20),
                     end: Date.UTC(2014, 10, 25),
                     dependency: 's'
                 }, {
                     id: 'a',
-                    name: 'Run acceptance tests',
+                    name: 'Go to Class',
                     start: Date.UTC(2014, 10, 23),
                     end: Date.UTC(2014, 10, 26)
                 }, {
-                    name: 'Test prototype',
+                    name: 'Gym',
                     start: Date.UTC(2014, 10, 27),
                     end: Date.UTC(2014, 10, 29),
                     dependency: ['a', 'b']
